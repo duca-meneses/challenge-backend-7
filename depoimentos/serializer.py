@@ -1,8 +1,8 @@
 from rest_framework import serializers
-from depoimentos.models import Depoimentos
+from depoimentos.models import Depoimento
 
 class DepoimentoSerializer(serializers.ModelSerializer):
     
     class Meta:
-        model = Depoimentos
+        model = Depoimento
         fields = '__all__'

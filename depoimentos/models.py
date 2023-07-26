@@ -1,8 +1,8 @@
 from django.db import models
 
-class Depoimentos(models.Model):
+class Depoimento(models.Model):
     nome = models.CharField(max_length=30)
-    foto = models.ImageField(upload_to='foto/%d/%m/%Y/', blank=True)
+    foto = models.ImageField(upload_to='foto/depoimentos', blank=True)
     depoimento = models.CharField(max_length=300)
 
     def __str__(self):
