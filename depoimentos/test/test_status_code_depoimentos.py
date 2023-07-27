@@ -15,30 +15,26 @@ class TestStatusCode(APITestCase):
         self.depoimento4 = Depoimento.objects.create(nome='Depoimento 5', depoimento='Conteúdo do depoimento 5')
 
     def test_status_code_Get(self):
-        """Testando a requisição Get da  view DepoimentosViewSet """
+        """Testando a requisição Get do endpoint /depoimentos """
         url = reverse('Depoimentos-list')
         response = self.client.get(url)
         self.assertEqual(response.status_code, status.HTTP_200_OK)
     
     def test_status_code_Post(self):
-        """Testando a requisição Post da  view DepoimentosViewSet"""
+        """Testando a requisição Post do endpoint /depoimentos"""
         url = reverse('Depoimentos-list')
         response = self.client.post(url ,data=self.item1)
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
 
     def test_status_code_Put(self):
-        """Testando a requisição Put da view DepoimentosViewSet"""
+        """Testando a requisição Put do endpoint /depoimentos"""
         url = reverse('Depoimentos-detail', kwargs={'pk': self.depoimento1.pk})
         response = self.client.put(url, data=self.item1)
         self.assertEqual(response.status_code, status.HTTP_200_OK)
     
     def test_status_code_Delete(self):
-        """Testando a requisição Delete da view DepoimentosViewSet"""
+        """Testando a requisição Delete do endpoint /depoimentos"""
         url = reverse('Depoimentos-detail', kwargs={'pk': self.depoimento2.pk})
         response = self.client.delete(url)
         self.assertEqual(response.status_code, status.HTTP_204_NO_CONTENT)
 
-      
-
-
-    
