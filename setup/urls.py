@@ -7,7 +7,7 @@ from rest_framework import routers
 
 router = routers.DefaultRouter()
 router.register('depoimentos', DepoimentoViewSet, basename='Depoimentos')
-router.register('destinos', DestinoViewSet, basename='Destino') 
+router.register('destinos', DestinoViewSet, basename='Destinos') 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
