@@ -22,9 +22,11 @@ class DestinoViewSet(viewsets.ModelViewSet):
     def list(self, request, *args, **kwargs):
         # Verificar se o parâmetro 'nome' foi fornecido na URL
         nome = request.query_params.get('nome')
-        if nome:
-            return Response({"mensagem": "Nenhum destino foi encontrado"}, status=status.HTTP_400_BAD_REQUEST)
-        return super().list(request, *args, **kwargs)
+        if nome is None:
+            return super().list(request, *args, **kwargs)
+        return Response({"mensagem": "Nenhum destino foi encontrado"}, status=status.HTTP_400_BAD_REQUEST)
+        
+    
 
     
 
