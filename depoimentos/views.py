@@ -13,6 +13,7 @@ class DepoimentoViewSet(viewsets.ModelViewSet):
 
 
 class DepoimentoHomeView(APIView):
+    """Lista 3 depoimentos aleatórios na rota /depoimentos-home"""
     def get(self, request):
         depoimentos = Depoimento.objects.all()
         num_depoimentos = depoimentos.count()
