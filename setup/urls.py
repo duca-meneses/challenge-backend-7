@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.urls import path, include
 from depoimentos.views import DepoimentoViewSet, DepoimentoHomeView
-from destinos.views import DestinoViewSet
+from destinos.views import DestinoViewSet, DestinoHomeView
 from rest_framework import routers
 
 
@@ -12,5 +12,7 @@ router.register('destinos', DestinoViewSet, basename='Destinos')
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('depoimentos-home/', DepoimentoHomeView.as_view(), name='depoimentos-home'),
+    path('destinos-home/', DestinoHomeView.as_view(), name='destinos-home' ),
     path('', include(router.urls))
+
 ]
