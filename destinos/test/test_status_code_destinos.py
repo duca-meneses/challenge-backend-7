@@ -6,9 +6,9 @@ from destinos.models import Destino
 class Test_status_code(APITestCase):
     def setUp(self):
         # Criando alguns objetos de teste para Destinos
-        self.item1 = {'nome': 'Destino de Teste', 'preco': 2000.0}
-        self.destino1 = Destino.objects.create(nome='Destino 2', preco=200.5)
-        self.destino2 = Destino.objects.create(nome='Destino 3', preco=300.5)
+        self.item1 = {'nome': 'Destino de Teste', 'foto_1': '', 'foto_2': '', 'meta_descricao': 'test_descrição', 'texto_descritivo':''}
+        self.destino1 = Destino.objects.create(nome='Destino 2', foto_1='', foto_2='', meta_descricao='descrição',texto_descritivo='test')
+        self.destino2 = Destino.objects.create(nome='Destino 3', foto_1='', foto_2='',meta_descricao='descrição',texto_descritivo='test')
 
     def test_status_code_GET(self):
         """Testando a requisição GET do endpoint /destinos"""
