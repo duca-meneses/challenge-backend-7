@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     "depoimentos",
     "destinos",
     "corsheaders",
+    "drf_yasg2",
 ]
 
 MIDDLEWARE = [
