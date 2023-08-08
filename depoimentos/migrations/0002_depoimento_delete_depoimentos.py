@@ -6,28 +6,31 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ("depoimentos", "0001_initial"),
+        ('depoimentos', '0001_initial'),
     ]
 
     operations = [
         migrations.CreateModel(
-            name="Depoimento",
+            name='Depoimento',
             fields=[
                 (
-                    "id",
+                    'id',
                     models.BigAutoField(
                         auto_created=True,
                         primary_key=True,
                         serialize=False,
-                        verbose_name="ID",
+                        verbose_name='ID',
                     ),
                 ),
-                ("nome", models.CharField(max_length=30)),
-                ("foto", models.ImageField(blank=True, upload_to="foto/%d/%m/%Y/")),
-                ("depoimento", models.CharField(max_length=300)),
+                ('nome', models.CharField(max_length=30)),
+                (
+                    'foto',
+                    models.ImageField(blank=True, upload_to='foto/%d/%m/%Y/'),
+                ),
+                ('depoimento', models.CharField(max_length=300)),
             ],
         ),
         migrations.DeleteModel(
-            name="Depoimentos",
+            name='Depoimentos',
         ),
     ]

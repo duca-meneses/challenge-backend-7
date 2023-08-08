@@ -11,20 +11,23 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name="Destino",
+            name='Destino',
             fields=[
                 (
-                    "id",
+                    'id',
                     models.BigAutoField(
                         auto_created=True,
                         primary_key=True,
                         serialize=False,
-                        verbose_name="ID",
+                        verbose_name='ID',
                     ),
                 ),
-                ("nome", models.CharField(max_length=30)),
-                ("foto", models.ImageField(blank=True, upload_to="foto/destinos")),
-                ("preco", models.FloatField(max_length=10)),
+                ('nome', models.CharField(max_length=30)),
+                (
+                    'foto',
+                    models.ImageField(blank=True, upload_to='foto/destinos'),
+                ),
+                ('preco', models.FloatField(max_length=10)),
             ],
         ),
     ]
