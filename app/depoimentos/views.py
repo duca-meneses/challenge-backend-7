@@ -4,8 +4,8 @@ from rest_framework import status, viewsets
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
-from depoimentos.models import Depoimento
-from depoimentos.serializer import DepoimentoSerializer
+from app.depoimentos.models import Depoimento
+from app.depoimentos.serializer import DepoimentoSerializer
 
 
 class DepoimentoViewSet(viewsets.ModelViewSet):

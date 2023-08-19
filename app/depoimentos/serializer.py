@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from depoimentos.models import Depoimento
+from app.depoimentos.models import Depoimento
 
 
 class DepoimentoSerializer(serializers.ModelSerializer):

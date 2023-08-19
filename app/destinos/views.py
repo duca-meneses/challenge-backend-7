@@ -6,8 +6,8 @@ from rest_framework import status, viewsets
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
-from destinos.models import Destino
-from destinos.serializer import DestinoSerializer
+from app.destinos.models import Destino
+from app.destinos.serializer import DestinoSerializer
 
 
 class DestinoFilter(FilterSet):

@@ -2,7 +2,7 @@
 
 from django.db import migrations, models
 
-import destinos.models
+import app.destinos.models
 
 
 class Migration(migrations.Migration):
@@ -24,14 +24,14 @@ class Migration(migrations.Migration):
             model_name='destino',
             name='foto_1',
             field=models.ImageField(
-                blank=True, upload_to=destinos.models.destino_directory_path
+                blank=True, upload_to=app.destinos.models.destino_directory_path
             ),
         ),
         migrations.AddField(
             model_name='destino',
             name='foto_2',
             field=models.ImageField(
-                blank=True, upload_to=destinos.models.destino_directory_path
+                blank=True, upload_to=app.destinos.models.destino_directory_path
             ),
         ),
         migrations.AddField(

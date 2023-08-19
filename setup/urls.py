@@ -4,8 +4,8 @@ from drf_yasg2 import openapi
 from drf_yasg2.views import get_schema_view
 from rest_framework import permissions, routers
 
-from depoimentos.views import DepoimentoHomeView, DepoimentoViewSet
-from destinos.views import DestinoHomeView, DestinoViewSet
+from app.depoimentos.views import DepoimentoHomeView, DepoimentoViewSet
+from app.destinos.views import DestinoHomeView, DestinoViewSet
 
 schema_view = get_schema_view(
     openapi.Info(

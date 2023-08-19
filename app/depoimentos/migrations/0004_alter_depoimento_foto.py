@@ -2,7 +2,7 @@
 
 from django.db import migrations, models
 
-import depoimentos.models
+import app.depoimentos.models
 
 
 class Migration(migrations.Migration):
@@ -17,7 +17,7 @@ class Migration(migrations.Migration):
             name='foto',
             field=models.ImageField(
                 blank=True,
-                upload_to=depoimentos.models.declarador_directory_path,
+                upload_to=app.depoimentos.models.declarador_directory_path,
             ),
         ),
     ]
