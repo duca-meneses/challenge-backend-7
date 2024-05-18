@@ -3,6 +3,13 @@
 
 Api rest criada durante as semanas do Chalenge de Backend da ALura #alurachallengebackend7
 
+## Stack utilizada
+
+* Django
+* Django Rest Framework
+* Sqlite
+* OpenAI
+* Swagger
 
 ## Como usar
 
@@ -21,17 +28,6 @@ Para baixar as dependencias do projeto:
   pip install -r requirements.txt
 
 ```
-
-
-
-    
-## Stack utilizada
-
-* Django
-* Django Rest Framework
-* Sqlite
-* API da OPENAI
-* Swagger
 
 
 ## Autor
